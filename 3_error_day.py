@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # this shows the days that have more than 1% of the requrests were errors 
 
 import psycopg2 as pg
@@ -20,8 +21,8 @@ db.close()
 
 print('\nDays with error rate >1%:\n')
 
-threshold = 0.01 
+threshold = 0.01
 
 for item in result:
-    if item[1]> threshold: 
-        print(str(item[0])+ ' error rate:'+ str(item[1]))
+    if item[1]> threshold:
+        print(str(item[0]) + ' error rate:' + str(item[1]))

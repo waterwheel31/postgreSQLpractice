@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # this shows the most popular article authors 
 
 import psycopg2 as pg
@@ -7,7 +8,6 @@ SQL_view = 'create view r_articles as select replace(path, \'/article/\',\'\') a
 SQL_auth = 'create view n_authors as select author, count(author) as num from r_articles left join articles on r_articles.path = articles.slug group by author order by count(author) desc;'
 SQL_name = 'create view name_authors as select name, num from n_authors left join authors on n_authors.author = authors.id;' 
 SQL      = 'select * from name_authors;'
-
 
 db = pg.connect(dbname=DBNAME)
 conn  = db.cursor()
@@ -22,4 +22,4 @@ print('\nTop Authors:\n')
 
 for author in result:
     if author[0] is not None: 
-        print(author[0] + '\t ('+ str(author[1]) + ') ')
+        print(author[0] + '\t (' + str(author[1]) + ') ')
