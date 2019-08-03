@@ -1,5 +1,5 @@
 
-This is a practice of PostgreSQL
+## This is a practice of PostgreSQL
 
 This tries to do following tasks regarding a database
 
@@ -9,19 +9,22 @@ This tries to do following tasks regarding a database
 
 
 
-To run these codes, it is required to download the data base from this link and place in the same directory
+## To run these codes:
+
+*  Install PostgreSQL in the machine (or Vagrant or Docker) 
+*  Download the data base from this link and place in the same directory
 https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
+*  Load the data into PostgreSQL Database
+*  Prepare Python3 
+*  Install psycopg2 ('pip3 install psycopg2')
 
 
+## Followings are the resutls for the three tasks mentioned above
 
 
+#### Result of 1 
 
-followings are the resutls for the three tasks mentioned above
-
-
-Result of 1 
-
-Top Articles:
+Top Articles (number of views)
 
 candidate-is-jerk        (338647)
 bears-love-berries       (253801)
@@ -33,9 +36,9 @@ so-many-bears    (84504)
 media-obsessed-with-bears        (84383)
 
 
-Result of 2 
+#### Result of 2 
 
-Top Authors:
+Top Authors (number of views) 
 
 Ursula La Multa  (507594)
 Rudolf von Treppenwitz   (423457)
@@ -43,7 +46,7 @@ Anonymous Contributor    (170098)
 Markoff Chaney   (84557)
 
 
-Result of 2 
+##### Result of 3 
 
 Days with error rate >1%:
 
